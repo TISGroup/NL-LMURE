@@ -132,7 +132,7 @@ We first select the $T$ most temporally similar frames using the **unbiased matc
 
 ### Step 1 — Unbiased Intra-Block Regression (LMURE)
 
-Within each $B \times B$ spatiotemporal block, we extract non-overlapping $P_1 \times P_1$ patches and find the $K_1$ nearest neighbors via block matching. The stacked noisy patches $\mathbf{Y} \in \mathbb{R}^{m \times k}$ (where $m = C \cdot P_1^2$) are denoised by the linear operator $\hat{\mathbf{X}} = \mathbf{Y}\mathbf{\Theta}^*$, with $\mathbf{\Theta}^*$ given by the **LMURE closed-form solution** (Theorem 4, Eq. 13):
+Within each $B \times B$ spatiotemporal block, we extract non-overlapping $P_1 \times P_1$ patches and find the $K_1$ nearest neighbors via block matching. The stacked noisy patches $\mathbf{Y} \in \mathbb{R}^{m \times k}$ (where $m = C \cdot P_1^2$) are denoised by the linear operator $\hat{\mathbf{X}} = \mathbf{Y}\mathbf{\Theta}^{*}$, with $\mathbf{\Theta}^*$ given by the **LMURE closed-form solution** (Theorem 4, Eq. 13):
 
 $$\mathbf{\Theta}^* = \mathbf{I}_k - \frac{\tau^2}{\tau^2 + 1} (\mathbf{Y}^\top\mathbf{Y})^{-1} \mathbf{D},$$
 
