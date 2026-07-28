@@ -138,6 +138,7 @@ $$\mathbf{\Theta}^* = \mathbf{I}_k - \frac{\tau^2}{\tau^2 + 1} (\mathbf{Y}^\top\
 
 where $\mathbf{D} = \mathrm{diag}(\|\mathbf{Y}_{:,1}\|^2, \ldots, \|\mathbf{Y}_{:,k}\|^2)$. This is derived by minimizing the **unbiased risk estimator** (Corollary 3.1, Eq. 11) that accurately estimates $\mathbb{E}\|\mathbf{X} - \hat{\mathbf{X}}\|_F^2$ without ground truth. Patches are aggregated via weighted-average reprojection with weights $w_j = 1 / \|\mathbf{\Theta}_{:,j}\|^2$ (Section 3.2).
 
+
 ### Step 2 — Internal Adaptation (Guided Regression)
 
 Following the two-step design in NL-Means, BM3D, and NL-Ridge, we re-apply the pipeline using the Step 1 output $\hat{\mathbf{X}}$ as a **pilot estimate** (Section 4.6). The noise variance is re-estimated from $\hat{\mathbf{X}}$ via the RANSAC-based linear regression (Section 4.5, Eq. 15), and patch-matching indices are determined on the cleaner pilot. The second-stage weights are the least-squares solution $\mathbf{\Theta}^\star = \mathbf{Y}^\dagger \hat{\mathbf{X}}$, producing the final denoised output $\tilde{\mathbf{X}} = \mathbf{Y}\mathbf{\Theta}^\star$.
