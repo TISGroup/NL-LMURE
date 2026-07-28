@@ -136,7 +136,7 @@ Within each $B \times B$ spatiotemporal block, we extract non-overlapping $P_1 \
 
 $$\mathbf{\Theta}^\star = \mathbf{I}_k - \frac{\tau^2}{\tau^2 + 1} (\mathbf{Y}^\top\mathbf{Y})^{-1} \mathbf{D},$$
 
-where $\mathbf{D} = \mathrm{diag}(\Vert\mathbf{Y}_{:,1}\|^2, \ldots, \|\mathbf{Y}_{:,k}\Vert^2)$. This is derived by minimizing the **unbiased risk estimator** (Corollary 3.1, Eq. 11) that accurately estimates $\mathbb{E}\|\mathbf{X} - \hat{\mathbf{X}}\|_F^2$ without ground truth. Patches are aggregated via weighted-average reprojection with weights $w_j = 1 / \|\mathbf{\Theta}_{:,j}\|^2$ (Section 3.2).
+where $\mathbf{D} = \mathrm{diag}(\Vert\mathbf{Y}_{:,1}\|^2, ..., \|\mathbf{Y}_{:,k}\Vert^2)$. This is derived by minimizing the **unbiased risk estimator** (Corollary 3.1, Eq. 11) that accurately estimates $\mathbb{E}\|\mathbf{X} - \hat{\mathbf{X}}\|_F^2$ without ground truth. Patches are aggregated via weighted-average reprojection with weights $w_j = 1 / \|\mathbf{\Theta}_{:,j}\|^2$ (Section 3.2).
 
 
 ### Step 2 — Internal Adaptation (Guided Regression)
