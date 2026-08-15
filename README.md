@@ -10,7 +10,7 @@ PyTorch implementation of the paper:
 > **Unbiased and Nonlocal Linear Regression for Video Denoising under Multiplicative Noise**  
 > *Zipei Yan¹, Ting Wang², Chao Wang²\*, Jizhou Li¹\**  
 > ¹ The Chinese University of Hong Kong &emsp; ² Southern University of Science and Technology  
-> *Journal of Mathematical Imaging and Vision (JMIV), 2026*
+> *Journal of Mathematical Imaging and Vision (JMIV) *68*, 58 (2026)*
 
 ---
 
@@ -97,7 +97,7 @@ Clean data is saved as multi-frame `.tif` stacks in `./data/clean/`.
 
 ### 2. Simulate Noisy Data
 
-The noise simulator supports all five multiplicative distributions studied in the paper (Section 5.1, Table 1). By default it generates **Gamma** noise at four noise levels:
+The noise simulator supports all five multiplicative distributions studied in the paper (Section 5.1, Table 1). By default, it generates **Gamma** noise at four noise levels:
 
 $$v \in \{0.01, 0.04, 0.25, 1\} \quad\longleftrightarrow\quad \tau \in \{0.1, 0.2, 0.5, 1.0\}$$
 
@@ -194,10 +194,14 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{yan2026nl_lmure,
-  title   = {Unbiased and Nonlocal Linear Regression for Video Denoising under Multiplicative Noise},
-  author  = {Yan, Zipei and Wang, Ting and Wang, Chao and Li, Jizhou},
-  journal = {Journal of Mathematical Imaging and Vision},
-  year    = {2026},
+  title     = {Unbiased and Nonlocal Linear Regression for Video Denoising under Multiplicative Noise},
+  author    = {Yan, Zipei and Wang, Ting and Wang, Chao and Li, Jizhou},
+  journal   = {Journal of Mathematical Imaging and Vision},
+  volume    = {68},
+  number    = {5},
+  pages     = {58},
+  year      = {2026},
+  doi       = {10.1007/s10851-026-01343-4}
 }
 ```
 
